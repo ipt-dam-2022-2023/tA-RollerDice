@@ -11,26 +11,20 @@
 
     <TextView
         android:id="@+id/resultTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
         android:text=""
-        android:textSize="60sp" />
+        android:textSize="@dimen/LargeTextSize"
+        style="@style/diceAlignment"/>
 
     <ImageView
         android:id="@+id/diceImageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        app:srcCompat="@drawable/empty_dice" />
+        app:srcCompat="@drawable/empty_dice"
+        style="@style/diceAlignment"/>
 
     <Button
         android:id="@+id/btRollDice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="Roll the dice"
-        android:textSize="20sp" />
+        android:text="@string/btRollerDice"
+        android:textSize="@dimen/MediumTextSize"
+        style="@style/diceAlignment" />
 
 
 </LinearLayout>

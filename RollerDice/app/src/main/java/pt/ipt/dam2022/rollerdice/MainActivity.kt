@@ -9,6 +9,10 @@ import android.widget.Toast
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
+
+    // define the 'pointer' to the ImageView
+    lateinit var diceImage: ImageView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -23,6 +27,8 @@ class MainActivity : AppCompatActivity() {
             rollDice()
         }
 
+        // 'start' the use of diceImage
+        diceImage = findViewById<ImageView>(R.id.diceImageView)
     }
 
     /**
@@ -46,8 +52,8 @@ class MainActivity : AppCompatActivity() {
             6 -> R.drawable.dice_6
             else -> R.drawable.empty_dice
         }
+        // var diceImage = findViewById<ImageView>(R.id.diceImageView) // -> not needed any more because we use lateinit
         // assign the image to the ImageView
-        var diceImage = findViewById<ImageView>(R.id.diceImageView)
         diceImage.setImageResource(drawableResource)
     }
 }
